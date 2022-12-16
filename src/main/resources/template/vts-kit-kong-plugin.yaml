@@ -1,0 +1,11 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: __PLUGINNAME__
+  namespace: __NAMESPACE__
+plugin: rate-limiting
+config:
+  second: __SECOND__
+  minute: __MINUTE__
+  hour: __HOUR__
+  policy: local
