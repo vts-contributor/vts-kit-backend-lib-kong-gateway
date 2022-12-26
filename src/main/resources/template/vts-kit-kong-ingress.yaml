@@ -4,7 +4,7 @@ metadata:
   name: __INGRESSNAME__
   namespace: __NAMESPACE__
   annotations:
-    konghq.com/plugins: __PLUGINNAME__
+#    konghq.com/plugins: __PLUGINNAME__
     konghq.com/strip-path: "true"
 spec:
   ingressClassName: kong

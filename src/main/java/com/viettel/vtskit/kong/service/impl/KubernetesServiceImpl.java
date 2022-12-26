@@ -147,7 +147,7 @@ public class KubernetesServiceImpl implements KubernetesService {
             String ingressTemplateYaml = Utils.readFileToStringFromResource(NameTemplate.NAME_INGRESS_TEMPLATE);
             String ingressYaml = ingressTemplateYaml
                     .replace("__INGRESSNAME__",serviceConfiguration.getServicename()+"-ingress")
-                    .replace("__PLUGINNAME__",serviceConfiguration.getServicename()+"-plugin")
+                    //.replace("__PLUGINNAME__",serviceConfiguration.getServicename()+"-plugin")
                     .replace("__NAMESPACE__", kubernetesConfiguration.getNamespace())
                     .replace("__ROUTE__", serviceConfiguration.getRoute())
                     .replace("__SERVICENAME__", serviceConfiguration.getServicename())
