@@ -4,6 +4,8 @@ now the basic values of a project will be collectively configured in the file: [
 
 ### Structure
 ```
+
+
 .
 └── <Workspace>/
     ├── cicd/
