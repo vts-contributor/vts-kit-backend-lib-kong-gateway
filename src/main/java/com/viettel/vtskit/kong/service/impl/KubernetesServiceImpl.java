@@ -72,7 +72,6 @@ public class KubernetesServiceImpl implements KubernetesService {
             String svcTemplateYaml = Utils.readFileToStringFromResource(NameTemplate.NAME_DEPLOY_TEMPLATE);
             File yamlFile = Utils.createTempFile(".yaml");
             Utils.writeStringToFile(yamlFile, svcTemplateYaml);
-            System.out.println("ve nau an");
             Deployment deployment = operation.inNamespace("kong-dbless").load(yamlFile).get();
             if(deployment == null){
                 throw new Exception("Init deployment error");
@@ -82,7 +81,6 @@ public class KubernetesServiceImpl implements KubernetesService {
             Utils.deleteFile(yamlFile);
             //waitDeployRollingSuccess(namespace, deployName, 1, OPERATION_TIMEOUT_SECOND, 10);
             //return deployment.getMetadata().getName();
-
             return "Successfully";
         }catch (Exception e){
             throw new Exception(e.getMessage());
@@ -97,7 +95,6 @@ public class KubernetesServiceImpl implements KubernetesService {
             String svcTemplateYaml = Utils.readFileToStringFromResource(NameTemplate.NAME_SVC_TEMPLATE);
             File yamlFile = Utils.createTempFile(".yaml");
             Utils.writeStringToFile(yamlFile, svcTemplateYaml);
-            System.out.println("ve nau an");
             io.fabric8.kubernetes.api.model.Service service = operation.load(yamlFile).get();
             operation.inNamespace("kong-dbless").createOrReplace(service);
             Utils.deleteFile(yamlFile);

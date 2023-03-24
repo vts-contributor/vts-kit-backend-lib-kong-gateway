@@ -37,7 +37,6 @@ public class KongService {
     @PostConstruct
     public void initialize() throws Exception {
         this.kongConfiguration = context.getBean(KongAutoConfiguration.class);
-//        System.out.printf("init");
     }
 
 
