@@ -11,7 +11,7 @@ The vts-kit-lib-kong library is developed with the intention of automating the d
 ```xml
 <dependency>
     <groupId>com.atviettelsolutions</groupId>
-    <artifactId>vts-kit-ms-kong</artifactId>
+    <artifactId>vts-kit-backend-lib-kong-gateway</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```
